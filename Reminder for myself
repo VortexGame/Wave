@@ -1,0 +1,57 @@
+REMINDER:
+
+public static void main (String [] args) {
+
+Is main run method in your java program and is used to make the program runnable (also use implements Runnable to 
+
+make sure that you can open and run the program, even though I will make a run method later)
+
+Also use extends Canvas to make sure that the window is set up, even though I will be overiding that with JFrames
+
+Make sure to add unimplented methods and the defult serialized ID because I will need A run method later, and the 
+
+default SID is important, but I don't really know what it does.
+
+To set height and width, do: 
+
+public static final int WIDTH = 160;
+public static final int HEIGHT = WIDTH / 12 * 9;
+public static final int SCALE = 3; (upscaling the window, because if we had no scale, this would be a tiny window.)
+
+Or, 
+
+Make a window class and set those varaibles there.
+
+To set the name, do:
+
+public static final String NAME = "(Name of game)"; (Strings are important, so make sure to remember how to make 
+
+them. You can also do this in the window class and call it in the game class.)
+
+Then create a Jframe by doing:
+
+private Jframe frame; (Make your JFrame private because you don't want the code trying to change the JFrame, 
+
+otherwise, it would mess with your window and code.)
+
+Make sure that you have methods for closing the game, like (method).exitonclose or a string for exitonclose
+
+public static final means that the line of code or the string can not be changed when the game is running and 
+
+always stays the same unless changed. (There are different modifiers to this like ints, and private static finals, 
+
+which are completely different, like we used for the WIDTH, HEIGHT, and SCALE.)
+
+Also you have to make a thread in the run method to start the game, otherwise they would have to start the game in 
+
+eclipse.
+
+Also make sure to make sure the game has a tick system, which is complicated, but is implented in its own method. 
+
+It makes the sprites and objects in the game run at the same speeds, even though one computer is faster than the 
+
+other. This means it will run at a constant FPS the entire time, no matter how crappy your computer is. This is 
+
+also called locked FPS.
+
+Remeber, an if method usaly starts with if(i = 0; i < || > (call method); i++) {
